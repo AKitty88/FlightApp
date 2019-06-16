@@ -9,7 +9,16 @@
 import UIKit
 
 class FlightTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var flightTo: UILabel!
+    @IBOutlet weak var cityFrom: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var cityFromLong: UILabel!
+    @IBOutlet weak var duration: UILabel!
+    @IBOutlet weak var cityTo: UILabel!
+    @IBOutlet weak var arrivalTime: UILabel!
+    @IBOutlet weak var cityToLong: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

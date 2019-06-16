@@ -27,7 +27,11 @@ class FlightTableViewController: UITableViewController {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            flightData = try decoder.decode([FlightData].self, from: data)
+            let flightDataAll = try decoder.decode([FlightData].self, from: data)
+            flightData = [FlightData()]
+            flightData?[0] = flightDataAll[0]
+            flightData?.append(flightDataAll[1])
+            flightData?.append(flightDataAll[2])
         } catch {
             print("ERROR: ", error)
         }
@@ -53,9 +57,18 @@ class FlightTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "flightCell", for: indexPath)
-        //cell.textLabel?.text = flightData[indexPath.row]
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "flightCell", for: indexPath) as? FlightTableViewCell
+        if let flight = flightData {
+            cell?.flightTo.text = "Flight to " + flight[indexPath.row].arrival_city!
+            cell?.cityFrom.text = flight[indexPath.row].departure_city
+            cell?.startTime.text = flight[indexPath.row].departure_date
+            cell?.cityFromLong.text = flight[indexPath.row].departure_city
+            cell?.duration.text = flight[indexPath.row].scheduled_duration
+            cell?.cityTo.text = flight[indexPath.row].arrival_city
+            cell?.arrivalTime.text = flight[indexPath.row].arrival_date
+            cell?.cityToLong.text = flight[indexPath.row].arrival_city
+        }
+        return cell!
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
