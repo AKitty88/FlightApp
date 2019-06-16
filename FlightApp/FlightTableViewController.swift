@@ -16,20 +16,6 @@ class FlightTableViewController: UITableViewController {
         super.viewDidLoad()
         
         getJsonFromUrl()
-        
-//      let flight = FlightData()
-//      flight.id = jsonResult["id"] as? NSInteger
-//      flight.departure_date = jsonResult["departure_date"] as? Date
-//      flight.airline_code = jsonResult["airline_code"] as? NSString
-//      flight.flight_number = jsonResult["flight_number"] as? NSString
-//      flight.departure_city = jsonResult["departure_city"] as? NSString
-//      flight.departure_airport = jsonResult["departure_airport"] as? NSString
-//      flight.arrival_city = jsonResult["arrival_city"] as? NSString
-//      flight.arrival_airport = jsonResult["arrival_airport"] as? NSString
-//      flight.scheduled_duration = jsonResult["scheduled_duration"] as? NSString
-//      flight.arrival_date = jsonResult["arrival_date"] as? Date
-//
-//      flightData?.append(flight)
     }
     
     func getJsonFromUrl() {
@@ -41,8 +27,7 @@ class FlightTableViewController: UITableViewController {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let flights = try decoder.decode([FlightData].self, from: data)
-            print ("flights: ", flights)
+            flightData = try decoder.decode([FlightData].self, from: data)
         } catch {
             print("ERROR: ", error)
         }

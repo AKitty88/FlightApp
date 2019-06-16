@@ -9,18 +9,14 @@
 import Foundation
 
 struct FlightData: Decodable {
-    var id: Int?
-    var departure_date: String?
-    var airline_code: String?
-    var flight_number: String?
-    var departure_city: String?
-    var departure_airport: String?
-    var arrival_city: String?
-    var arrival_airport: String?
-    var scheduled_duration: String?
-    var arrival_date: String?
-    
-//    required init(from decoder:Decoder) throws {
-//        //
-//    }
+    let id: Int?
+    let departure_date: String?
+    let airline_code: String?
+    let flight_number: String?
+    let departure_city: String?
+    let departure_airport: String?
+    let arrival_city: String?
+    let arrival_airport: String?
+    let scheduled_duration: String?
+    let arrival_date: String?
 }
