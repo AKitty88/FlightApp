@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8A88D51322B5CE0A00E54CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D51222B5CE0A00E54CCC /* AppDelegate.swift */; };
-		8A88D51522B5CE0A00E54CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D51422B5CE0A00E54CCC /* ViewController.swift */; };
 		8A88D51822B5CE0A00E54CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A88D51622B5CE0A00E54CCC /* Main.storyboard */; };
 		8A88D51A22B5CE0A00E54CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A88D51922B5CE0A00E54CCC /* Assets.xcassets */; };
 		8A88D51D22B5CE0A00E54CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A88D51B22B5CE0A00E54CCC /* LaunchScreen.storyboard */; };
 		8A88D52822B5CE0A00E54CCC /* FlightAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D52722B5CE0A00E54CCC /* FlightAppTests.swift */; };
 		8A88D53322B5CE0A00E54CCC /* FlightAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D53222B5CE0A00E54CCC /* FlightAppUITests.swift */; };
+		8A88D54122B5D2B100E54CCC /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D54022B5D2B100E54CCC /* FlightTableViewController.swift */; };
+		8A88D54322B5EEF300E54CCC /* FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D54222B5EEF300E54CCC /* FlightData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		8A88D50F22B5CE0A00E54CCC /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A88D51222B5CE0A00E54CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A88D51422B5CE0A00E54CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A88D51722B5CE0A00E54CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A88D51922B5CE0A00E54CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A88D51C22B5CE0A00E54CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		8A88D52E22B5CE0A00E54CCC /* FlightAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A88D53222B5CE0A00E54CCC /* FlightAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppUITests.swift; sourceTree = "<group>"; };
 		8A88D53422B5CE0A00E54CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A88D54022B5D2B100E54CCC /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
+		8A88D54222B5EEF300E54CCC /* FlightData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				8A88D51222B5CE0A00E54CCC /* AppDelegate.swift */,
-				8A88D51422B5CE0A00E54CCC /* ViewController.swift */,
 				8A88D51622B5CE0A00E54CCC /* Main.storyboard */,
 				8A88D51922B5CE0A00E54CCC /* Assets.xcassets */,
 				8A88D51B22B5CE0A00E54CCC /* LaunchScreen.storyboard */,
 				8A88D51E22B5CE0A00E54CCC /* Info.plist */,
+				8A88D54022B5D2B100E54CCC /* FlightTableViewController.swift */,
+				8A88D54222B5EEF300E54CCC /* FlightData.swift */,
 			);
 			path = FlightApp;
 			sourceTree = "<group>";
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A88D51522B5CE0A00E54CCC /* ViewController.swift in Sources */,
 				8A88D51322B5CE0A00E54CCC /* AppDelegate.swift in Sources */,
+				8A88D54322B5EEF300E54CCC /* FlightData.swift in Sources */,
+				8A88D54122B5D2B100E54CCC /* FlightTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
