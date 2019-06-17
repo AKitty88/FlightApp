@@ -64,10 +64,10 @@ class FlightTableViewController: UITableViewController {
             var departureCityToken = flight[indexPath.row].departure_city?.components(separatedBy: delimiter)
             
             cell?.flightTo.text = "Flight to " + (arrivalCityToken?[0])!
-            cell?.cityFrom.text = (departureCityToken?[0])!
+            cell?.cityFrom.text = flight[indexPath.row].departure_airport
             cell?.cityFromLong.text = (departureCityToken?[0])!
             cell?.duration.text = flight[indexPath.row].scheduled_duration
-            cell?.cityTo.text = (arrivalCityToken?[0])!
+            cell?.cityTo.text = flight[indexPath.row].arrival_airport
             cell?.cityToLong.text = (arrivalCityToken?[0])!
             
             // Converting departure_date to flightTimeString and flightDateString
