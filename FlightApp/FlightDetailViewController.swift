@@ -39,6 +39,7 @@ class FlightDetailViewController: UIViewController {
         gate.text = "--"
         seat.text = "--"
         
+        // Converting departure_date to flightTimeString and flightDateString
         var dateString = flightDetail?.departure_date
         let dateFormatter = DateFormatter()
         //set the date format to dateOriginal's date format
@@ -57,12 +58,8 @@ class FlightDetailViewController: UIViewController {
         // Convert date to string
         var flightDateString = dateFormatter.string(from: flightTime ?? Date())
         startDate.text = flightDateString
-
         
-        
-        
-        
-        
+        // Converting arrival_date to flightTimeString and flightDateString
         dateString = flightDetail?.arrival_date
         //set the date format to dateOriginal's date format
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'.000'"

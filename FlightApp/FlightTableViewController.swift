@@ -67,6 +67,35 @@ class FlightTableViewController: UITableViewController {
             cell?.cityTo.text = flight[indexPath.row].arrival_city
             cell?.arrivalTime.text = flight[indexPath.row].arrival_date
             cell?.cityToLong.text = flight[indexPath.row].arrival_city
+            
+            // Converting departure_date to flightTimeString and flightDateString
+            var dateString = flight[indexPath.row].departure_date
+            let dateFormatter = DateFormatter()
+            //set the date format to dateOriginal's date format
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'.000'"
+            // set locale to en_US_POSIX
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            var flightTime = dateFormatter.date(from: dateString!)
+            
+            //set the date format to the type of output that is needed
+            dateFormatter.dateFormat = "HH:mm"
+            // Convert date to string
+            var flightTimeString = dateFormatter.string(from: flightTime ?? Date())
+            cell?.startTime.text = flightTimeString
+            
+            // Converting arrival_date to flightTimeString and flightDateString
+            dateString = flight[indexPath.row].arrival_date
+            //set the date format to dateOriginal's date format
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'.000'"
+            // set locale to en_US_POSIX
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            flightTime = dateFormatter.date(from: dateString!)
+            
+            //set the date format to the type of output that is needed
+            dateFormatter.dateFormat = "HH:mm"
+            // Convert date to string
+            flightTimeString = dateFormatter.string(from: flightTime ?? Date())
+            cell?.arrivalTime.text = flightTimeString
         }
         return cell!
     }
