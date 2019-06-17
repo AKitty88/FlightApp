@@ -29,22 +29,6 @@ class FlightDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var dateString = flightDetail?.departure_date
-        let timeFormatter = DateFormatter()
-        //set the date format to dateOriginal's date format
-        timeFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'.000'"
-        timeFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        let flightTime = timeFormatter.date(from: dateString!)
-        
-        //set the date format to the type of output that is needed
-        timeFormatter.dateFormat = "HH:mm a"
-        // Convert date to string
-        var flightTimeString = timeFormatter.string(from: flightTime ?? Date())
-        
-        // startDate.text = flightDateString
-        startTime.text = flightTimeString
-        
-        
         cityFrom.text = flightDetail?.departure_airport ?? "--"
         cityFromLong.text = flightDetail?.departure_city ?? "--"
         cityTo.text = flightDetail?.arrival_airport ?? "--"
@@ -56,6 +40,25 @@ class FlightDetailViewController: UIViewController {
         terminal.text = flightDetail?.departure_airport ?? "--"
         gate.text = "--"
         seat.text = "--"
+        
+        var dateString = flightDetail?.departure_date
+        let dateFormatter = DateFormatter()
+        //set the date format to dateOriginal's date format
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'.000'"
+        // set locale to en_US_POSIX
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        let flightTime = dateFormatter.date(from: dateString!)
+        
+        //set the date format to the type of output that is needed
+        dateFormatter.dateFormat = "HH:mm a"
+        // Convert date to string
+        var flightTimeString = dateFormatter.string(from: flightTime ?? Date())
+        startTime.text = flightTimeString
+
+        dateFormatter.dateFormat = "E, d MMM"
+        // Convert date to string
+        var flightDateString = dateFormatter.string(from: flightTime ?? Date())
+        startDate.text = flightDateString
     }
 
     override func didReceiveMemoryWarning() {
