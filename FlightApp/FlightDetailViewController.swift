@@ -29,13 +29,16 @@ class FlightDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cityFrom.text = flightDetail?.departure_airport ?? "--"
-        cityFromLong.text = flightDetail?.departure_city ?? "--"
-        cityTo.text = flightDetail?.arrival_airport ?? "--"
-        cityToLong.text = flightDetail?.arrival_city ?? "--"
+        let delimiter = ", "
+        var arrivalCityToken = flightDetail?.arrival_city?.components(separatedBy: delimiter)
+        var departureCityToken = flightDetail?.departure_city?.components(separatedBy: delimiter)
         
+        cityFrom.text = flightDetail?.departure_airport ?? "--"
+        cityFromLong.text = (departureCityToken?[0])!
+        cityTo.text = flightDetail?.arrival_airport ?? "--"
+        cityToLong.text = (arrivalCityToken?[0])!
         flightNr.text = flightDetail?.flight_number ?? "--"
-        terminal.text = flightDetail?.departure_airport ?? "--"
+        terminal.text = flightDetail?.airline_code ?? "--"
         gate.text = "--"
         seat.text = "--"
         
