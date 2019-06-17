@@ -17,6 +17,7 @@
 		8A88D53322B5CE0A00E54CCC /* FlightAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D53222B5CE0A00E54CCC /* FlightAppUITests.swift */; };
 		8A88D54122B5D2B100E54CCC /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D54022B5D2B100E54CCC /* FlightTableViewController.swift */; };
 		8A88D54322B5EEF300E54CCC /* FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88D54222B5EEF300E54CCC /* FlightData.swift */; };
+		8A91772E22B7033F00A8954F /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91772D22B7033F00A8954F /* FlightDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8A88D53422B5CE0A00E54CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A88D54022B5D2B100E54CCC /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
 		8A88D54222B5EEF300E54CCC /* FlightData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightData.swift; sourceTree = "<group>"; };
+		8A91772D22B7033F00A8954F /* FlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				8A88D51622B5CE0A00E54CCC /* Main.storyboard */,
 				8A88D54022B5D2B100E54CCC /* FlightTableViewController.swift */,
 				8A22BC3D22B6337900291841 /* FlightTableViewCell.swift */,
+				8A91772D22B7033F00A8954F /* FlightDetailViewController.swift */,
 				8A88D54222B5EEF300E54CCC /* FlightData.swift */,
 				8A88D51922B5CE0A00E54CCC /* Assets.xcassets */,
 				8A88D51B22B5CE0A00E54CCC /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A91772E22B7033F00A8954F /* FlightDetailViewController.swift in Sources */,
 				8A88D51322B5CE0A00E54CCC /* AppDelegate.swift in Sources */,
 				8A22BC3E22B6337900291841 /* FlightTableViewCell.swift in Sources */,
 				8A88D54322B5EEF300E54CCC /* FlightData.swift in Sources */,
