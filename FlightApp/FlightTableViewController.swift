@@ -59,14 +59,16 @@ class FlightTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "flightCell", for: indexPath) as? FlightTableViewCell
         if let flight = flightData {
-            cell?.flightTo.text = "Flight to " + flight[indexPath.row].arrival_city!
-            cell?.cityFrom.text = flight[indexPath.row].departure_city
-            cell?.startTime.text = flight[indexPath.row].departure_date
-            cell?.cityFromLong.text = flight[indexPath.row].departure_city
+            let delimiter = ", "
+            var arrivalCityToken = flight[indexPath.row].arrival_city?.components(separatedBy: delimiter)
+            var departureCityToken = flight[indexPath.row].departure_city?.components(separatedBy: delimiter)
+            
+            cell?.flightTo.text = "Flight to " + (arrivalCityToken?[0])!
+            cell?.cityFrom.text = (departureCityToken?[0])!
+            cell?.cityFromLong.text = (departureCityToken?[0])!
             cell?.duration.text = flight[indexPath.row].scheduled_duration
-            cell?.cityTo.text = flight[indexPath.row].arrival_city
-            cell?.arrivalTime.text = flight[indexPath.row].arrival_date
-            cell?.cityToLong.text = flight[indexPath.row].arrival_city
+            cell?.cityTo.text = (arrivalCityToken?[0])!
+            cell?.cityToLong.text = (arrivalCityToken?[0])!
             
             // Converting departure_date to flightTimeString and flightDateString
             var dateString = flight[indexPath.row].departure_date
