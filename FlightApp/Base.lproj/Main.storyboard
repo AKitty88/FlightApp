@@ -100,7 +100,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gr-ZJ-r85">
-                                            <rect key="frame" x="86" y="5" width="60" height="18"/>
+                                            <rect key="frame" x="86" y="5.5" width="60" height="17.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -345,7 +345,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code.png" translatesAutoresizingMaskIntoConstraints="NO" id="1pz-Rw-vke">
-                                        <rect key="frame" x="99" y="151" width="150" height="151"/>
+                                        <rect key="frame" x="102.5" y="151" width="150" height="151"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Ak2-wa-Dxt"/>
                                         </constraints>
@@ -369,7 +369,6 @@
                                     <constraint firstItem="aZr-ym-1le" firstAttribute="top" secondItem="kiK-IA-dsX" secondAttribute="bottom" constant="21" id="NM1-8H-TSq"/>
                                     <constraint firstItem="WaH-vt-A2C" firstAttribute="baseline" secondItem="jH6-8f-8YI" secondAttribute="baseline" id="NeL-15-Koc"/>
                                     <constraint firstItem="ZDQ-7i-lCt" firstAttribute="firstBaseline" secondItem="WaH-vt-A2C" secondAttribute="firstBaseline" id="PWN-LN-TZQ"/>
-                                    <constraint firstItem="1pz-Rw-vke" firstAttribute="leading" secondItem="ctX-BA-Tes" secondAttribute="leading" constant="99" id="TXV-v2-E92"/>
                                     <constraint firstItem="ZDQ-7i-lCt" firstAttribute="leading" secondItem="aZr-ym-1le" secondAttribute="trailing" constant="5" id="X2x-Nh-UFr"/>
                                     <constraint firstItem="kiK-IA-dsX" firstAttribute="leading" secondItem="aZr-ym-1le" secondAttribute="leading" id="amd-Qa-zqA"/>
                                     <constraint firstItem="5qM-m0-709" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vLW-6K-a5s" secondAttribute="trailing" priority="750" constant="84.5" id="cL1-c1-rlU"/>
@@ -380,6 +379,7 @@
                                     <constraint firstItem="vLW-6K-a5s" firstAttribute="baseline" secondItem="5qM-m0-709" secondAttribute="baseline" id="mei-T5-DJN"/>
                                     <constraint firstItem="aZr-ym-1le" firstAttribute="baseline" secondItem="ZDQ-7i-lCt" secondAttribute="baseline" id="n1H-tY-JsO"/>
                                     <constraint firstItem="Rkz-ZL-Mht" firstAttribute="leading" secondItem="jH6-8f-8YI" secondAttribute="leading" id="nME-lT-a8U"/>
+                                    <constraint firstItem="1pz-Rw-vke" firstAttribute="centerX" secondItem="ctX-BA-Tes" secondAttribute="centerX" id="rKk-wE-omX"/>
                                     <constraint firstItem="ZDQ-7i-lCt" firstAttribute="baseline" secondItem="WaH-vt-A2C" secondAttribute="baseline" id="tgm-2z-uRd"/>
                                     <constraint firstItem="Rkz-ZL-Mht" firstAttribute="trailing" secondItem="jH6-8f-8YI" secondAttribute="trailing" id="tpU-1O-s2i"/>
                                     <constraint firstItem="kiK-IA-dsX" firstAttribute="firstBaseline" secondItem="vLW-6K-a5s" secondAttribute="firstBaseline" id="x2m-8f-Q6g"/>
