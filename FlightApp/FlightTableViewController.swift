@@ -27,11 +27,7 @@ class FlightTableViewController: UITableViewController {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let flightDataAll = try decoder.decode([FlightData].self, from: data)
-            flightData = [FlightData()]
-            flightData?[0] = flightDataAll[0]
-            flightData?.append(flightDataAll[1])
-            flightData?.append(flightDataAll[2])
+            flightData = try decoder.decode([FlightData].self, from: data)
         } catch {
             print("ERROR: ", error)
         }
